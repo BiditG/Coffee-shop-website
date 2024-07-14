@@ -8,73 +8,58 @@ h1 {
     font-family: "Annie Use Your Telescope", cursive;
 }
 p {
-    font-family:cursive;
+    font-family: cursive;
     font-weight: bolder;
 }
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
-
 .logo {
     font-size: 1.3em;
     font-weight: bold;
     display: flex;
     align-items: center;
-    
 }
-
 .logo::before {
-
     margin-right: 10px;
 }
-
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
-    position: relative;
-    right: 200%;
 }
-
 nav a {
     text-decoration: none;
     color: #3b2f2f;
     font-weight: bold;
 }
-
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
 }
-
 .hero-text {
     max-width: 50%;
 }
-
 .hero-text h1 {
     font-size: 3em;
     margin-bottom: 100px;
 }
-
 .hero-text p {
     font-size: 1.2em;
     color: #6f5b5b;
     position: relative;
     bottom: 40px;
 }
-
 .hero-image {
     max-width: 40%;
 }
-
 .hero-image img {
     width: 100%;
     border-radius: 10px;
@@ -83,7 +68,6 @@ nav a {
     padding: 40px;
     background-color: #cfb095;
     text-align: center;
-    
 }
 .aboutus h1 {
     font-size: 3em;
@@ -109,17 +93,15 @@ iframe {
     gap: 40px;
 }
 .menu-item {
-    overflow: hidden; 
+    overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 400px;
+    width: 100%;
 }
 .menu-item:hover {
     transition: box-shadow 0.5s ease-in;
-    box-shadow:  21px 21px 36px #b5b5b5;
-    
+    box-shadow: 21px 21px 36px #b5b5b5;
 }
-
 .menu-item img {
     display: block;
     width: 100%;
@@ -137,75 +119,116 @@ iframe {
     font-size: 3em;
 }
 .footer {
-    background-color: #d3c8b6; 
-    color: #635e59; 
+    background-color: #d3c8b6;
+    color: #635e59;
     padding: 40px 0;
 }
-
 .container1 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 .footer-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .footer-logo img {
-    width: 80px; 
+    width: 80px;
     margin-bottom: 10px;
 }
-
 .footer-contact p {
     margin-bottom: 8px;
     font-size: 14px;
 }
 .footer-bottom {
-    background-color: #b7ab98; 
+    background-color: #b7ab98;
     padding: 10px 0;
     text-align: center;
-    color: #635e59; 
+    color: #635e59;
     font-size: 14px;
 }
 @media (max-width: 768px) {
-    main {
-        width: 100%;
-    }
     nav ul {
         display: none;
     }
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
-
     .hero-text, .hero-image {
         max-width: 100%;
     }
-
     .hero-image {
         margin-top: 20px;
     }
-    .aboutus h1 {
-        width: 7.2em;
-        position: relative;
-        right: 15px;
+    .hero-text h1 {
+        margin-bottom: 20px;
     }
-    #Location h1 {
+    .hero-text p {
+        bottom: 0;
+        font-size: 1em;
+    }
+    .aboutus h1 {
         font-size: 2.5em;
     }
+    .aboutus p {
+        font-size: 1em;
+    }
+    #Location h1 {
+        font-size: 2em;
+    }
     #Location p {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     iframe {
-        width: 350px;
-        height: 350px;
+        width: 100%;
+        height: auto;
     }
     .container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-    
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .logo {
+        font-size: 1.2em;
+    }
+    .hero {
+        padding: 10px;
+    }
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .aboutus {
+        padding: 20px;
+    }
+    .aboutus h1 {
+        font-size: 2em;
+    }
+    .aboutus p {
+        font-size: 0.9em;
+    }
+    #Location h1 {
+        font-size: 1.8em;
+    }
+    #Location p {
+        font-size: 0.9em;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    iframe {
+        width: 70%;
+    }
 }
