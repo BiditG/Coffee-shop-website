@@ -64,6 +64,31 @@ nav a {
     width: 100%;
     border-radius: 10px;
 }
+.typing-animation {
+    color: white;
+    position: relative;
+    bottom: 350px;
+    left: 150px;
+    font-size: 30px;
+    font-style: italic;
+    font-family: cursive;
+    white-space: nowrap;
+    overflow: hidden; 
+    border-right: .15em solid white; 
+    width: 0px; 
+    animation: typing 3s steps(19)  infinite, blink-caret 0.75s step-end infinite ;
+}
+
+@keyframes typing {
+    from { width: 0px; }
+    to { width: 300px; } 
+}
+
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: white; }
+}
+
 .aboutus {
     padding: 40px;
     background-color: #cfb095;
@@ -190,6 +215,11 @@ iframe {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .typing-animation {
+        position: relative;
+        left: 50px;
+     }
+     
 }
 @media (max-width: 480px) {
     header {
@@ -231,4 +261,9 @@ iframe {
     iframe {
         width: 70%;
     }
+    .typing-animation {
+       position: relative;
+       left: 50px;
+    }
+    
 }
